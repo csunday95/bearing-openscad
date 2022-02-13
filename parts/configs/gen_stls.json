@@ -1,0 +1,61 @@
+{
+    "fileFormatVersion": "1",
+    "parameterSets": {
+        "InnerRace": {
+            "$fa": "0.01",
+            "$fs": "0.01",
+            "cage_thickness": "0.80000000000000004",
+            "height": "8",
+            "id": "5",
+            "lip_depth": "0.5",
+            "lip_thickness": "0.40000000000000002",
+            "od": "6",
+            "part": "inner_race",
+            "roller_count": "16",
+            "roller_margin": "0.40000000000000002",
+            "roller_radius": "1"
+        },
+        "Rollers": {
+            "$fa": "0.01",
+            "$fs": "0.01",
+            "cage_thickness": "0.80000000000000004",
+            "height": "8",
+            "id": "5",
+            "lip_depth": "0.5",
+            "lip_thickness": "0.40000000000000002",
+            "od": "6",
+            "part": "rollers",
+            "roller_count": "16",
+            "roller_margin": "0.40000000000000002",
+            "roller_radius": "1"
+        },
+        "Cage": {
+            "$fa": "0.01",
+            "$fs": "0.01",
+            "cage_thickness": "0.80000000000000004",
+            "height": "8",
+            "id": "5",
+            "lip_depth": "0.5",
+            "lip_thickness": "0.40000000000000002",
+            "od": "6",
+            "part": "cage",
+            "roller_count": "16",
+            "roller_margin": "0.40000000000000002",
+            "roller_radius": "1"
+        },
+        "OuterRace": {
+            "$fa": "0.01",
+            "$fs": "0.01",
+            "cage_thickness": "0.80000000000000004",
+            "height": "8",
+            "id": "5",
+            "lip_depth": "0.5",
+            "lip_thickness": "0.40000000000000002",
+            "od": "6",
+            "part": "outer_race",
+            "roller_count": "16",
+            "roller_margin": "0.40000000000000002",
+            "roller_radius": "1"
+        }
+    }
+}
