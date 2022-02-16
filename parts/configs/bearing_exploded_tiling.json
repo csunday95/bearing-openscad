@@ -1,0 +1,20 @@
+{
+    "fileFormatVersion": "1",
+    "parameterSets": {
+        "v3_export": {
+            "$fa": "0.02",
+            "$fs": "0.050000000000000003",
+            "cage_margin": "0.14999999999999999",
+            "height": "12",
+            "id": "12",
+            "lip_depth": "1.25",
+            "lip_thickness": "1.25",
+            "od": "28",
+            "outer_thickness": "14",
+            "roller_cage_margin": "0.10000000000000001",
+            "roller_count": "12",
+            "roller_margin": "0.55000000000000004",
+            "roller_radius": "2.5"
+        }
+    }
+}

@@ -1,6 +1,6 @@
 
-$fa = 0.1;
-$fs = 0.1;
+$fa = 0.05;
+$fs = 0.025;
 
 include <radial_square_notches.scad>
 
@@ -37,8 +37,8 @@ module stand(thickness=1, mount_region_radius=1, hole_radius=0.5, base_margin=1,
   }
 }
 
-difference() {
+union() {
   stand(1, 2, 1, 1);
-  translate([3, 5, 0])
-    radial_square_notches(side_length=0.1,length=3, notches=16);
+  translate([3, 5, 0.5])
+    radial_square_notches(side_length=0.1,length=1, notches=16);
 }

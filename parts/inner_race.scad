@@ -5,8 +5,8 @@ module inner_race_profile(width, depth, lip_thickness, lip_depth) {
     [0, width / 2], 
     [depth, width / 2], 
     [depth, width / 2 - lip_thickness], 
-    [depth - lip_depth, width / 2 - lip_thickness], 
-    [depth - lip_depth, -width / 2 + lip_thickness], 
+    [depth - lip_depth, width / 2 - lip_thickness * 1.5], 
+    [depth - lip_depth, -width / 2 + lip_thickness * 1.5],
     [depth, -width / 2 + lip_thickness], 
     [depth, -width / 2]
   ];
@@ -28,4 +28,8 @@ module inner_race(width, id, od, lip_thickness, lip_depth, notches=0, notch_dept
           }
       }
   }
+}
+
+module test_profile() {
+  inner_race_profile(1, 1, 0.1, 0.1);
 }
