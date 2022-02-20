@@ -2,18 +2,6 @@ include <inner_race.scad>
 include <cage_split.scad>
 include <outer_race.scad>
 
-//$fa = 0.05;
-//$fs = 0.025;
-
-//id = 5;
-//od = 6;
-//height = 4;
-//lip_thickness = 0.4;
-//lip_depth = 0.5;
-//roller_radius = 1;
-//roller_margin = 0.3;
-//roller_count = 16;
-//cage_thickness = 0.5;
 
 module bearing_exploded(id, od, outer_thickness, height, lip_thickness, lip_depth, roller_radius, roller_margin, roller_count, cage_margin, roller_cage_margin) {
   outer_bound = (od + outer_thickness) / 2;
@@ -22,8 +10,14 @@ module bearing_exploded(id, od, outer_thickness, height, lip_thickness, lip_dept
   roller_height = height - lip_thickness * 2 - roller_margin * 2;
   
   // inner race
-  translate([outer_bound, outer_bound, 0])
-    inner_race(height, id, od, lip_thickness, lip_depth, 4, 1.5);
+  translate([outer_bound, outer_bound, 0]) {
+    difference() {
+      inner_race(height, id, od, lip_thickness, lip_depth, 4, 1.5);
+      // notch for roller insertion
+      translate([od / 2 + roller_radius - lip_depth * roller_insertion_fraction, 0, -roller_height / 2])
+        cylinder(h=roller_height, r=roller_radius, center=true);
+    }
+  }
 
   // rollers
   translate([-outer_bound, outer_bound + roller_radius, -roller_margin - lip_thickness]) {
@@ -42,5 +36,12 @@ module bearing_exploded(id, od, outer_thickness, height, lip_thickness, lip_dept
 
   // outer race
   translate([-outer_bound, -outer_bound, 0])
-    outer_race(height, outer_race_id, outer_race_id + outer_thickness, lip_thickness, lip_depth, notches=16, notch_depth=1.5);
+    difference() {
+      outer_race(height, outer_race_id, outer_race_id + outer_thickness, lip_thickness, lip_depth, notches=16, notch_depth=1.5);
+      // notch for assembly
+      translate([outer_race_id / 2 - roller_radius + lip_thickness * roller_insertion_fraction, 0, -roller_height / 2])
+        cylinder(h=roller_height, r=roller_radius, center=true);
+    }
 }
+
+roller_insertion_fraction = 0.95;
