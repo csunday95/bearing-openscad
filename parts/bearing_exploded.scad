@@ -24,7 +24,25 @@ module bearing_exploded(id, od, outer_thickness, height, lip_thickness, lip_dept
     for (a=[0:360/roller_count:360]) {
       rotate([0, 0, a])
         translate([od / 2 + roller_radius - lip_depth, 0, 0])
-          cylinder(h=roller_height, r=roller_radius, center=true);
+          difference() {
+            cylinder(h=roller_height, r=roller_radius, center=true);
+            translate([0, 0, roller_height / 2 - label_depth])
+              linear_extrude(2 * label_depth)
+                union() {
+                  text(
+                    text=str("r=", roller_radius),
+                    size=roller_radius/label_size_factor,
+                    halign="center",
+                    valign="bottom"
+                  );
+                  text(
+                    text=str("h=", roller_height),
+                    size=roller_radius/label_size_factor,
+                    halign="center",
+                    valign="top"
+                  );
+                }
+          }
     }
   }
   
@@ -44,4 +62,6 @@ module bearing_exploded(id, od, outer_thickness, height, lip_thickness, lip_dept
     }
 }
 
+label_size_factor = 5;
+label_depth = 0.1;
 roller_insertion_fraction = 0.95;
