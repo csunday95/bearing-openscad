@@ -39,8 +39,39 @@ Started keeping track at version 0.6.0
     },
  }
  ```
- ## Notes:
+ ### Notes:
   - smooth rolling performance with zero thrust, decent thrust zero-load performance
   - a bit more slop than I'd like in the axial direction due to the rollers being shorter than the bevel; candidate for panelization 
-  - probably can get a better insertion notch but putting it on the build head side
+  - probably can get a better insertion notch by putting it on the build head side
   - put text on the rollers / other parts in non crital areas for easier identification, best to put on non build side
+
+# 0.7.0
+
+ - added optional text labeling of parameters to the models, text parameters are hard coded for now
+ - added versioning file
+ - moved insertion notch to build side of print
+
+# 0.7.1
+ - decreased lip depth 1.3 -> 1.25, slightly reduces overhang for maybe overall better surface on axial side lip
+ - decreased roller margin 0.75 -> 0.6; should decrease axial slop
+
+### Notes:
+ - try decreasing the roller cage margin 0.2 -> 0.15 maybe?
+ - tried printing on P56 (pilot), but it had a lot of XY accuracy issues that made the fit pretty poor
+
+# 0.7.2a
+ - `lip_thickness` changed 0.8 -> 0.7
+ - `lip_depth` changed 1.25 -> 0.85
+ - `roller_cage_margin` changed 0.2 -> 0.175
+ - `roller_margin` changed 0.6 -> 0.4
+ - harcoded `roller_insertion_fraction` value changed to 0.975
+ - hardcoded `roller_insertion_fraction` value changed 0.95 -> 0.975
+ - hardcoded `label_depth` changed 0.2 -> 0.25
+
+# 0.7.2b
+ - `lip_thickness` changed 0.8 -> 0.6
+ - `lip_depth` changed 1.25 -> 0.75
+ - `roller_cage_margin` changed 0.2 -> 0.15
+ - `roller_margin` changed 0.6 -> 0.3
+ - hardcoded `roller_insertion_fraction` value changed 0.95 -> 0.98
+ - hardcoded `label_depth` changed 0.2 -> 0.25

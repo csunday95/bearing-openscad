@@ -70,7 +70,52 @@
             "outer_thickness": "14",
             "roller_cage_margin": "0.20000000000000001",
             "roller_count": "12",
-            "roller_margin": "0.75",
+            "roller_margin": "0.80000000000000004",
+            "roller_radius": "2.5"
+        },
+        "V0.7.2a": {
+            "$fa": "0.01",
+            "$fs": "0.050000000000000003",
+            "cage_margin": "0.29999999999999999",
+            "height": "12",
+            "id": "12",
+            "lip_depth": "0.84999999999999998",
+            "lip_thickness": "0.80000000000000004",
+            "od": "28",
+            "outer_thickness": "14",
+            "roller_cage_margin": "0.17499999999999999",
+            "roller_count": "12",
+            "roller_margin": "0.40000000000000002",
+            "roller_radius": "2.5"
+        },
+        "export_0.7.2a": {
+            "$fa": "0.01",
+            "$fs": "0.050000000000000003",
+            "cage_margin": "0.29999999999999999",
+            "height": "12",
+            "id": "12",
+            "lip_depth": "0.84999999999999998",
+            "lip_thickness": "0.69999999999999996",
+            "od": "28",
+            "outer_thickness": "14",
+            "roller_cage_margin": "0.17499999999999999",
+            "roller_count": "12",
+            "roller_margin": "0.40000000000000002",
+            "roller_radius": "2.5"
+        },
+        "export_v0.7.2.b": {
+            "$fa": "0.01",
+            "$fs": "0.050000000000000003",
+            "cage_margin": "0.29999999999999999",
+            "height": "12",
+            "id": "12",
+            "lip_depth": "0.75",
+            "lip_thickness": "0.59999999999999998",
+            "od": "28",
+            "outer_thickness": "14",
+            "roller_cage_margin": "0.14999999999999999",
+            "roller_count": "12",
+            "roller_margin": "0.29999999999999999",
             "roller_radius": "2.5"
         }
     }
