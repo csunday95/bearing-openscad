@@ -1,7 +1,7 @@
 include <inner_race.scad>
 include <cage_split.scad>
 include <outer_race.scad>
-include <../../util/revolve_text.scad>
+include <../util/revolve_text.scad>
 include <version.scad>
 
 
