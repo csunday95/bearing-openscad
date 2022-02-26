@@ -75,3 +75,32 @@ Started keeping track at version 0.6.0
  - `roller_margin` changed 0.6 -> 0.3
  - hardcoded `roller_insertion_fraction` value changed 0.95 -> 0.98
  - hardcoded `label_depth` changed 0.2 -> 0.25
+
+# 0.7.2c (relative to 0.7.1)
+ - added `outer_id_margin` parameter with an initial value of 0.1. Increases the outer race
+ id by that amount to create a tiny amount of radial wiggle room for spin & assembly.
+ - `lip_thickness` changed 0.8 -> 1.0
+ - `lip_depth` changed 1.25 -> 0.8
+ - `roller_cage_margin` changed 0.2 -> 0.15
+ - `roller_margin` changed 0.6 -> 0.45
+ - hardcoded `roller_insertion_fraction` value changed 0.95 -> 0.99
+ - hardcoded `label_depth` changed 0.2 -> 0.3
+ - hardcoded `label_size_factor` changed 3.0 -> 2.25
+
+### Notes:
+ - printed in Keyguide; material is just too brittle to reliably remove cage parts, tends to shatter
+ - extremely high lubricity and compressive strength, possibly perfect material for races, but maybe risky for
+ rollers due to lack of ductility?
+ - after material shrinkage, roller is slightly too long, is rubbing on the lip's sloped surface
+
+# 0.7.3 (relative to 0.7.2c)
+ - `roller_margin` changed 0.45 -> 0.55
+ - hardcoded `roller_insertion_fraction` value changed 0.95 -> 1.0
+
+### Notes:
+ - printed in 3843
+ - cage still way too brittle, have to increase lip thickness and roller margin back towards V6 values
+
+# 0.7.3b (relative to 0.7.2a)
+- `lip_thickness` changed 1.0 -> 1.2
+- `roller_margin` changed 0.55 -> 0.6
