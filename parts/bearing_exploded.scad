@@ -5,9 +5,10 @@ include <../util/revolve_text.scad>
 include <version.scad>
 
 
-module bearing_exploded(id, od, outer_thickness, outer_id_margin, height, lip_thickness, lip_depth, roller_radius, roller_margin, roller_count, cage_margin, roller_cage_margin, labels=true) {
+module bearing_exploded(id, od, outer_thickness, outer_id_margin, height, lip_thickness, lip_depth, roller_radius, roller_margin, roller_count, cage_margin_frac, roller_cage_margin, labels=true) {
   outer_bound = (od + outer_thickness) / 2;
   outer_race_id = 2 * (od / 2 + roller_radius * 2 - lip_depth * 2) + outer_id_margin;
+  cage_margin = roller_radius * cage_margin_frac;
   cage_thickness = roller_radius * 2 - cage_margin - lip_depth * 2;
   roller_height = height - lip_thickness * 2 - roller_margin * 2;
   

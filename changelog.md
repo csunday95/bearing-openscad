@@ -104,3 +104,15 @@ Started keeping track at version 0.6.0
 # 0.7.3b (relative to 0.7.2a)
 - `lip_thickness` changed 1.0 -> 1.2
 - `roller_margin` changed 0.55 -> 0.6
+
+# 0.7.3c/big (relative to 0.7.2b)
+ - increased od, outer thicknes, roller radius and height to generally make a bigger bearing
+ - decreased lip thickness 1.2 -> 1.1
+
+# 0.7.4a & b
+ - cage margin changed to a fraction of `roller_radius`, renamed `cage_margin_frac`
+ - changed multiple others to fractional, but compute the output in bearing_exploded_tiling.scad
+ before calling bearing_exploded()
+ - a vs b is changed to size
+ - for b, tweaked the outer race text radius outer_thickness divisor to 2.2 and inner race radius 
+ divisor to 2.1 (need) to make these values more universal later
