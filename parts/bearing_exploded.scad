@@ -23,7 +23,7 @@ module bearing_exploded(id, od, outer_thickness, outer_id_margin, height, lip_th
         // labels
         translate([0, 0, height / 2 - label_depth]) {
           revolve_text(
-            radius=(id + (od - id) / 2) / 2,
+            radius=(id + (od - id) / 2) / 2.1,
             chars=str(
               "id=", id, 
               ",od=", od,
@@ -111,15 +111,16 @@ module bearing_exploded(id, od, outer_thickness, outer_id_margin, height, lip_th
         lip_thickness=lip_thickness,
         lip_depth=lip_depth, 
         notches=outer_notch_count, 
-        notch_depth=notch_depth
+        notch_depth=notch_depth,
+        lower_lip_overhang_frac=lower_lip_overhang_frac
       );
       // notch for assembly
-      translate([outer_race_id / 2 - roller_radius + lip_thickness * roller_insertion_fraction - outer_id_margin * 2, 0, -roller_height / 2])
+      translate([outer_race_id / 2 - roller_radius + lip_depth * roller_insertion_fraction - outer_id_margin * 2, 0, -roller_height / 2])
         cylinder(h=roller_height, r=roller_radius, center=true);
       if (labels) {
         translate([0, 0, height / 2 - label_depth]) {
           revolve_text(
-            radius=od / 2 + outer_thickness / 3,
+            radius=od / 2 + outer_thickness / 2.1,
             chars=str(
               ",id=", outer_race_id,
               ",od=", outer_race_id + outer_thickness,
@@ -130,7 +131,7 @@ module bearing_exploded(id, od, outer_thickness, outer_id_margin, height, lip_th
               ",ld=", lip_depth,
               ",V=", VERSION
             ),
-            font_size=(od - id) / 7,
+            font_size=(od - id) / 5,
             thickness=label_depth * 2
           );
         }
@@ -138,9 +139,13 @@ module bearing_exploded(id, od, outer_thickness, outer_id_margin, height, lip_th
     }
 }
 
-label_size_factor = 2.25;
-label_depth = 0.3;
+label_size_factor = 3.5;
+label_depth = 0.15;
 roller_insertion_fraction = 1.0;
+// value to compensate for first layer getting slightly dilated in the 
+// lower lip compared to top layer overhang; lower lip radial length is 90% of
+// nominal value
+lower_lip_overhang_frac = 0.9;
 outer_notch_count = 16;
 inner_notch_count = 4;
-notch_depth = 1.5;
+notch_depth = 0.25;

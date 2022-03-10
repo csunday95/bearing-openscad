@@ -87,7 +87,6 @@
             "height": "12",
             "id": "12",
             "od": "28",
-            "outer_id_margin": "0.10000000000000001",
             "outer_thickness": "14",
             "roller_count": "12",
             "roller_radius": "2.5"
@@ -98,7 +97,6 @@
             "height": "14",
             "id": "12",
             "od": "30",
-            "outer_id_margin": "0.10000000000000001",
             "outer_thickness": "18",
             "roller_count": "12",
             "roller_radius": "3"
@@ -109,7 +107,6 @@
             "height": "14",
             "id": "12",
             "od": "30",
-            "outer_id_margin": "0.10000000000000001",
             "outer_thickness": "18",
             "roller_count": "12",
             "roller_radius": "3"
