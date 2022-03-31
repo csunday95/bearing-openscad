@@ -44,8 +44,11 @@ module cage_split(id, height, thickness, cut_out_height, cut_out_width, cut_out_
 //
 //cage_split(od + roller_radius / 2 - cage_thickness / 2, height, cage_thickness, roller_height, roller_radius * 2, roller_count);
 
+//$fs = 0.1;
+//$fa = 0.1;
+//
 //module test_cage_split() {
-//  cage_split(10, 3, 3, 2, 2, 12);
+//  cage_split(10, 8, 3, 2, 2, 12);
 //}
 //
 //test_cage_split();

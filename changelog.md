@@ -116,3 +116,22 @@ Started keeping track at version 0.6.0
  - a vs b is changed to size
  - for b, tweaked the outer race text radius outer_thickness divisor to 2.2 and inner race radius 
  divisor to 2.1 (need) to make these values more universal later
+
+# 0.8.0a
+ - made outer race outer diameter a fixed value rather than a computed one called `outer_od`
+   - going to try to use 50mm diameter going forward as "standard"
+   - tweaked some text radius calculations to compensate
+   - changed outer_id_margin_frac to compute relative to
+   `outer_od - od - roller_radius * 2`
+
+# 0.8.0b
+ - increased roller radius 2.5 -> 2.75
+
+# 0.8.2a
+ - roller_cage_margin_frac 0.0075 -> 0.0125
+ - outer_id_margin_frac 0.0025 -> 0.001
+ - roller_margin_frac 0.05 -> 0.055
+ - cage_margin_frac 1 / 4.0 -> 1 / 3.9
+ - introduced a new parameter, roller_vertical_cage_margin_frac to try
+ to reduce roller rolling resistance. Adds a small axial margin to the roller/
+ cage interface
