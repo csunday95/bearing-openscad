@@ -135,3 +135,28 @@ Started keeping track at version 0.6.0
  - introduced a new parameter, roller_vertical_cage_margin_frac to try
  to reduce roller rolling resistance. Adds a small axial margin to the roller/
  cage interface
+
+# 0.8.3a 
+ - added cage base thicknening variable `cage_base_thickness_frac`, started with 3%
+
+# 0.8.3b
+ - changed `cage_margin_frac` from 1 / 3.9 -> 1 / 3.75
+ - changed `roller_margin_frac` from 0.05 -> 0.06
+ - changed `lip_thickness_frac` from 0.0786 -> 0.075
+ - changed `lip_depth_frac` from 0.02677 -> 0.025
+ - changed `cage_base_thickness_frac` 0.03 -> 0.015
+ - changed `roller_margin_frac` 0.06 -> 0.07
+
+# 0.8.3c
+ - changed `cage_base_thickness_frac` 0.015 -> 0.0125
+ - changed `roller_margin_frac` from 0.06 -> 0.055
+
+# 0.8.3d
+ - changed `roller_margin_frac` from 0.055 -> 0.04
+ - changed `outer_id_margin_frac` from 0.001 -> 0.0005; eliminate?
+ - changed `roller_cage_margin_frac` form 0.0125 -> 0.0120
+
+ # 0.8.3e
+ - changed `roller_margin_frac` from 0.04 -> 0.037
+ - changed `outer_id_margin_frac` from 0.0005 -> 0.0000; eliminate?
+ - changed `roller_cage_margin_frac` back form 0.0120 -> 0.0125
