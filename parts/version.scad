@@ -1,1 +1,1 @@
-VERSION = "0.8.2a";
+VERSION = "0.8.3e";

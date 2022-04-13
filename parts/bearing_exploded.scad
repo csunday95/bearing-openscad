@@ -7,7 +7,7 @@ include <version.scad>
 function str_n_digits(n, digits=2) = str(round(10 ^ digits * n) / 10 ^ digits);
 
 
-module bearing_exploded(id, od, outer_od, outer_id_margin, height, lip_thickness, lip_depth, roller_radius, roller_margin, roller_count, cage_margin_frac, cage_inner_diameter_mult, roller_cage_margin, roller_vertical_cage_margin, labels=true) {
+module bearing_exploded(id, od, outer_od, outer_id_margin, height, lip_thickness, lip_depth, roller_radius, roller_margin, roller_count, cage_margin_frac, cage_base_thickness_frac, cage_inner_diameter_mult, roller_cage_margin, roller_vertical_cage_margin, labels=true) {
   outer_bound = outer_od / 2;
   outer_race_id = 2 * (od / 2 + roller_radius * 2 - lip_depth * 2) + outer_id_margin;
   cage_margin = roller_radius * cage_margin_frac;
@@ -87,7 +87,7 @@ module bearing_exploded(id, od, outer_od, outer_id_margin, height, lip_thickness
       difference() {
         cage_split(
           cage_id, 
-          height + 2 * roller_vertical_cage_margin,
+          height * (1 + cage_base_thickness_frac) + 2 * roller_vertical_cage_margin,
           cage_thickness,
           roller_height + 2 * roller_vertical_cage_margin,
           roller_radius * 2 + roller_cage_margin * 2,
@@ -135,21 +135,23 @@ module bearing_exploded(id, od, outer_od, outer_id_margin, height, lip_thickness
       // notch for assembly
       translate([outer_race_id / 2 - roller_radius + lip_depth * roller_insertion_fraction - outer_id_margin * 2, 0, -roller_height / 2])
         cylinder(h=roller_height, r=roller_radius, center=true);
-      if (labels) {
+      if (!labels) {
         translate([0, 0, height / 2 - label_depth]) {
           revolve_text(
             radius=(outer_race_id + (outer_od - outer_race_id)) / 2 * 0.75,
-            chars=str(
-              ",id=", outer_race_id,
-              ",od=", outer_od,
-              ",rr=", roller_radius,
-              ",ht=", height,
-              ",lt=", lip_thickness,
-              ",ld=", lip_depth,
-              ",V=", VERSION
-            ),
+//            chars=str(
+//              ",id=", outer_race_id,
+//              ",od=", outer_od,
+//              ",rr=", roller_radius,
+//              ",ht=", height,
+//              ",lt=", lip_thickness,
+//              ",ld=", lip_depth,
+//              ",V=", VERSION
+//            ),
+            chars=str("V=", VERSION),
             font_size=(od - id) / 7,
-            thickness=label_depth * 2
+            thickness=label_depth * 2,
+            arc_fraction=0.15
           );
         }
       }
