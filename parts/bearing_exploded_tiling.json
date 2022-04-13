@@ -4,16 +4,145 @@
         "v3_export": {
             "$fa": "0.02",
             "$fs": "0.050000000000000003",
-            "cage_margin": "0.14999999999999999",
             "height": "12",
             "id": "12",
-            "lip_depth": "1.25",
-            "lip_thickness": "1.25",
             "od": "28",
-            "outer_thickness": "14",
-            "roller_cage_margin": "0.10000000000000001",
             "roller_count": "12",
-            "roller_margin": "0.55000000000000004",
+            "roller_radius": "3"
+        },
+        "design_v4": {
+            "$fa": "0",
+            "$fs": "0.050000000000000003",
+            "height": "12",
+            "id": "12",
+            "od": "28",
+            "roller_count": "12",
+            "roller_radius": "2.5"
+        },
+        "design_v5": {
+            "$fa": "0.10000000000000001",
+            "$fs": "0.050000000000000003",
+            "height": "12",
+            "id": "12",
+            "od": "28",
+            "roller_count": "12",
+            "roller_radius": "2.5"
+        },
+        "export_v6": {
+            "$fa": "0.01",
+            "$fs": "0.050000000000000003",
+            "height": "12",
+            "id": "12",
+            "od": "28",
+            "roller_count": "12",
+            "roller_radius": "2.5"
+        },
+        "export_v7": {
+            "$fa": "0.01",
+            "$fs": "0.050000000000000003",
+            "height": "12",
+            "id": "12",
+            "od": "28",
+            "roller_count": "12",
+            "roller_radius": "2.5"
+        },
+        "V0.7.2a": {
+            "$fa": "0.01",
+            "$fs": "0.050000000000000003",
+            "height": "12",
+            "id": "12",
+            "od": "28",
+            "roller_count": "12",
+            "roller_radius": "2.5"
+        },
+        "export_0.7.2a": {
+            "$fa": "0.01",
+            "$fs": "0.050000000000000003",
+            "height": "12",
+            "id": "12",
+            "od": "28",
+            "roller_count": "12",
+            "roller_radius": "2.5"
+        },
+        "export_v0.7.2.b": {
+            "$fa": "0.01",
+            "$fs": "0.050000000000000003",
+            "height": "12",
+            "id": "12",
+            "od": "28",
+            "roller_count": "12",
+            "roller_radius": "2.5"
+        },
+        "export_0.7.3b": {
+            "$fa": "0.01",
+            "$fs": "0.050000000000000003",
+            "height": "12",
+            "id": "12",
+            "od": "28",
+            "roller_count": "12",
+            "roller_radius": "2.5"
+        },
+        "export_0.7.3c_big": {
+            "$fa": "0.01",
+            "$fs": "0.050000000000000003",
+            "height": "14",
+            "id": "12",
+            "od": "30",
+            "roller_count": "12",
+            "roller_radius": "3"
+        },
+        "export_0.7.4a": {
+            "$fa": "0.01",
+            "$fs": "0.050000000000000003",
+            "height": "14",
+            "id": "12",
+            "od": "30",
+            "roller_count": "12",
+            "roller_radius": "3"
+        },
+        "export_0.7.5a": {
+            "$fa": "0.01",
+            "$fs": "0.02",
+            "height": "4",
+            "id": "7",
+            "lip_depth_frac": "0.026769999999999999",
+            "lip_thickness_frac": "0.078600000000000003",
+            "od": "11",
+            "outer_id_margin_frac": "0.0050000000000000001",
+            "roller_cage_margin_frac": "0.0074999999999999997",
+            "roller_count": "12",
+            "roller_margin_frac": "0.050000000000000003",
+            "roller_radius": "1"
+        },
+        "0.7.5a_export": {
+            "$fa": "0.01",
+            "$fs": "0.02",
+            "cage_inner_diameter_mult": "1.0024999999999999",
+            "height": "12",
+            "id": "12",
+            "lip_depth_frac": "0.026769999999999999",
+            "lip_thickness_frac": "0.078600000000000003",
+            "od": "28",
+            "outer_id_margin_frac": "0.0030000000000000001",
+            "roller_cage_margin_frac": "0.0074999999999999997",
+            "roller_count": "12",
+            "roller_margin_frac": "0.050000000000000003",
+            "roller_radius": "2.5"
+        },
+        "V0.8.0a_export": {
+            "$fa": "0.01",
+            "$fs": "0.02",
+            "cage_inner_diameter_mult": "1.0024999999999999",
+            "height": "12",
+            "id": "12",
+            "lip_depth_frac": "0.026769999999999999",
+            "lip_thickness_frac": "0.078600000000000003",
+            "od": "28",
+            "outer_id_margin_frac": "0.00125",
+            "outer_od": "50",
+            "roller_cage_margin_frac": "0.0074999999999999997",
+            "roller_count": "12",
+            "roller_margin_frac": "0.050000000000000003",
             "roller_radius": "2.5"
         }
     }

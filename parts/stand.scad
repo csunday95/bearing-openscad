@@ -2,7 +2,7 @@
 $fa = 0.05;
 $fs = 0.025;
 
-include <radial_square_notches.scad>
+include <../util/radial_square_notches.scad>
 
 module profile(mount_region_radius=1, hole_radius=0.5, base_margin=1) {
   translate([1.5 * mount_region_radius, 2 * mount_region_radius + base_margin])

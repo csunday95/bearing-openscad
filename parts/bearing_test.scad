@@ -9,15 +9,15 @@ module bearing(id, od, outer_thickness, height, lip_thickness, lip_depth, roller
   outer_bound = (od + outer_thickness) / 2;
   
   // inner race
-//  difference(){
-//    translate([0, 0, height/2])
-//     inner_race(height, id, od, lip_thickness, lip_depth, 4, 1);
-//    for (a=[0:360/roller_count:360]) {
-//      rotate([0, 0, a])
-//        translate([od / 2 + roller_radius - lip_depth, 0, height / 2])
-//          #cylinder(h=roller_height, r=roller_radius, center=true);
-//    }
-//  }
+  difference(){
+    translate([0, 0, height/2])
+     inner_race(height, id, od, lip_thickness, lip_depth, 4, 1);
+    for (a=[0:360/roller_count:360]) {
+      rotate([0, 0, a])
+        translate([od / 2 + roller_radius - lip_depth, 0, height / 2])
+          #cylinder(h=roller_height, r=roller_radius, center=true);
+    }
+  }
 
   // rollers
   roller_height = height - lip_thickness * 2 - roller_margin * 2;
@@ -61,6 +61,6 @@ roller_radius = 2.5;
 roller_margin = 0.6;
 tile_offset = od / 2 + roller_radius + outer_thickness / 2;
 roller_count = 12;
-cage_margin = 0.1;
+cage_margin = 0.3;
 
 bearing(id, od, outer_thickness, height, lip_thickness, lip_depth, roller_radius, roller_margin, roller_count, cage_margin);
