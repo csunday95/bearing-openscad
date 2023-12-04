@@ -167,4 +167,4 @@ roller_insertion_fraction = 1.0;
 lower_lip_overhang_frac = 0.9;
 outer_notch_count = 16;
 inner_notch_count = 4;
-notch_depth = 1.5;
+notch_depth = 1.0;
